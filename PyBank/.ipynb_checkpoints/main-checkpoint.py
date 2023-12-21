@@ -19,7 +19,6 @@ greatest_decrease_date = 0
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     
-
     next(csvreader) # Function to advance the iterator to remove table header from loops
     rowcount = 0 # Variable to determine total number of rows/months in the dataset
     net_PL = 0 # Variable to store the total of P/L
