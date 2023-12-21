@@ -13,31 +13,30 @@ greatest_increase = 0
 greatest_decrease = 0
 greatest_increase_date = 0
 greatest_decrease_date = 0
+rowcount = 0 # Variable to determine total number of rows/months in the dataset
+net_PL = 0 # Variable to store the total of P/L
+change_m2m = [] # List to capture month to month change for average change calculation
 
 # Open the csv as `csvfile` and read the contents into 'csvreader'
 
 with open(csvpath, newline="") as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=",")
-    
+    csvreader = csv.reader(csvfile, delimiter=",")    
     next(csvreader) # Function to advance the iterator to remove table header from loops
-    rowcount = 0 # Variable to determine total number of rows/months in the dataset
-    net_PL = 0 # Variable to store the total of P/L
-    change_m2m = [] # List to capture month to month change for average change calculation
     data = list(csvreader) # Creating list 'data' from 'csvreader'
     last_row = int(data[0][1]) # Assign first row P/L amount to 'last_row' for first change calculation
 
 # For loop to iterate through 'data', calculate net P/L, and count rows(months) 
 
-    for row in data:
-        net_PL += int(row[1])    
-        rowcount += 1
+for row in data:
+    net_PL += int(row[1])    
+    rowcount += 1
 
 # For loop to calculate month to month P/L changes and append to 'change_m2m' list for average P&L calculation      
 
-    for row in data[1:]:
-        change = int(row[1]) - last_row
-        change_m2m.append(change)
-        last_row = int(row[1])
+for row in data[1:]:
+    change = int(row[1]) - last_row
+    change_m2m.append(change)
+    last_row = int(row[1])
 
 # Calculate average change in P/L from month to month
 
