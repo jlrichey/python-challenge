@@ -53,10 +53,12 @@ print(max(change_m2m))
 greatest_increase = max(change_m2m)
 greatest_decrease = min(change_m2m)
 max_index = change_m2m.index(greatest_increase)
+min_index = change_m2m.index(greatest_decrease)
 print(max_index)
 greatest_increase_date = data[max_index + 1][0]
+greatest_decrease_date = data[min_index + 1][0]
 print("Financial Analysis")
-print("----------------------------------")
+print("----------------------------")
 print(f"Total Months: {rowcount}")
 print(f"Total: ${net_PL}")
 print(f"Average Change: ${round(avg_change, 2)}")
