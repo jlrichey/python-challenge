@@ -51,11 +51,11 @@ This makes the dataset available for analysis and calculations.
 
 ## Approach
 
-The analysis is conducted primarily within the context of two `for` loops with the variable `change` storing the difference between the current row iteration of `data` and `last_row` and appending to the list `change_m2m` which stores the month-to-month changes. 
+The analysis is conducted primarily within the context of three `for` loops with the variable `change` storing the difference between the current row iteration of `data` and `last_row` and appending to the list `change_m2m` which stores the month-to-month changes. 
 
 The `net_PL` variable is used to store the monthly profits and losses data from iteration on the dataset and generate the total output.
 
-The `greatest_increase` and `greatest_decrease` variables store the result of the `max` and `min` function on the `change_m2m` list, identifying the greatest increase and decrease in profits for the output. `max_index` and `min_index` help to identify the corresponding dates for the same. 
+The `change_m2m_index` counter writes the index point to `max_index` and `min_index` when the criteria of their `if` statments are met. The `max_index` and `min_index` variables identify the index points in `data` to pull the correct dates for for the greatest increase and decrease in profits outputs.
 
 ## Outcome
 
