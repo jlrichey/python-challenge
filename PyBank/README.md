@@ -55,7 +55,7 @@ The analysis is conducted primarily within the context of three `for` loops with
 
 The `net_PL` variable is used to store the monthly profits and losses data from iteration on the dataset and generate the total output.
 
-The `change_m2m_index` counter writes the index point to `max_index` and `min_index` when the criteria of their `if` statments are met. The `max_index` and `min_index` variables identify the index points in `data` to pull the correct dates for for the greatest increase and decrease in profits outputs.
+The `change_m2m_index` counter writes the index point to `max_index` and `min_index` when the criteria of their `if` statments are met. The `max_index` and `min_index` variables identify the index points in `data` to pull the correct dates for the greatest increase and decrease in profits outputs.
 
 ## Outcome
 
