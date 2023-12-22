@@ -61,6 +61,6 @@ a
 The following sources were consulted in the development of this script. 
 
 * [Python.org](https://docs.python.org/3/library/functions.html)
-* [Python.org](https://docs.python.org/3/library/functions.html)
+* [stackoverflow](https://stackoverflow.com/questions/4362586/sum-a-list-of-numbers-in-python)
 * [Codecademy](https://www.codecademy.com/catalog/language/python)
 * [Real Python](https://realpython.com/python-sum-function/)
