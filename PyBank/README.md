@@ -49,17 +49,30 @@ with open(csvpath, newline="") as csvfile:
 ```
 This makes the dataset available for analysis and calculations.
 
-## Methods
+## Approach
 
-The analysis was conducted primarily within the context of two `for` loops with variables `change` storing the difference between the current row iteration of `data` and `last_row` and appending to the list `change_m2m` which stores the month-to-month changes. The`net_PL` variable was used to calculate the 
+The analysis is conducted primarily within the context of two `for` loops with the variable `change` storing the difference between the current row iteration of `data` and `last_row` and appending to the list `change_m2m` which stores the month-to-month changes. 
 
+The `net_PL` variable is used to store the monthly profits and losses data from iteration on the dataset and generate the total output.
 
+The `greatest_increase` and `greatest_decrease` variables store the result of the `max` and `min` function on the `change_m2m` list, identifying the greatest increase and decrease in profits for the output. `max_index` and `min_index` help to identify the corresponding dates for the same. 
 
+## Outcome
 
-## what achieved
-a
+The desired output was achieved and was printed to both the terminal command line and the `results.txt` file utilizing the `.write` method. See the following code snippet.
 
-## references/sources
+```python
+with open(output_path, 'w') as file:
+    file.write("Financial Analysis\n")
+    file.write("----------------------------\n")
+    file.write(f"Total Months: {rowcount}\n")
+    file.write(f"Total: ${net_PL}\n")
+    file.write(f"Average Change: ${round(avg_change, 2)}\n")
+    file.write(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})\n")
+    file.write(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})\n")
+```
+
+## Sources
 
 The following sources were consulted in the development of this script. 
 
