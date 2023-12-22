@@ -1,6 +1,6 @@
 ## PyFrat (*<ins>Py</ins>Bank's <ins>F</ins>inancial <ins>R</ins>ecords <ins>A</ins>nalysis <ins>T</ins>ool*)
 
-![Revenue](../Starter_Code/Images/revenue-per-lead.jpg)
+![Revenue](Images/revenue-per-lead.jpg)
 
 PyFrat ("PyBank's Financial Records Analysis Tool") is a Python script written in the Jupyter Labs notebook environment and exported to an executable file. PyFrat analyses a financial dataset provided by the PyBank institution and performes a number of calculations including the following:
 
