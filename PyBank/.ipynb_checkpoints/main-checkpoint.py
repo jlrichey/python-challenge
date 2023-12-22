@@ -31,31 +31,40 @@ for row in data:
     net_PL += int(row[1])    
     rowcount += 1
 
-# For loop to calculate month to month P/L changes and append to 'change_m2m' list for average P&L calculation      
+# For loop to calculate month to month P/L changes and append to 'change_m2m' list for average P&L calculation   
 
 for row in data[1:]:
     change = int(row[1]) - last_row
     change_m2m.append(change)
     last_row = int(row[1])
 
-# Calculate average change in P/L from month to month
-
-avg_change = sum(change_m2m) / len(change_m2m)
-
 # Locate greatest P/L increase and decrease in 'change_m2m' list and assign to analysis variables
-
-greatest_increase = max(change_m2m)
-greatest_decrease = min(change_m2m)
-
 # Gather index from 'change_m2m' list for greatest increase and decrease dates
 
-max_index = change_m2m.index(greatest_increase)
-min_index = change_m2m.index(greatest_decrease)
+change_sum = 0
+max_index = 0
+min_index = 0
+change_m2m_index = 0
 
-# Offset row index by "+1" to correct for greatest increase and decrease dates
+for num in change_m2m:
+    change_sum += num
+    change_m2m_index += 1
+    if greatest_increase < num:
+        max_index = change_m2m_index
+        greatest_increase = num
+    elif greatest_decrease > num:
+        min_index = change_m2m_index
+        greatest_decrease = num
 
-greatest_increase_date = data[max_index + 1][0]
-greatest_decrease_date = data[min_index + 1][0]
+# Calculate average change in P/L from month to month
+
+avg_change = change_sum / len(change_m2m)
+
+
+# Set cooresponding dates for greatest_increase and greatest_decrease
+
+greatest_increase_date = data[max_index][0]
+greatest_decrease_date = data[min_index][0]
 
 # Print analysis to terminal
 
