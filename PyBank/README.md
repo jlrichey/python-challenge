@@ -28,16 +28,39 @@ Greatest Decrease in Profits: Sep-2013 ($-2196167)
 ```
 The same results will also be exported as the text file [results.txt](Resources/results.txt).
 
+## Running the program
+
+Change the directory from the root repository folder to the `PyBank` folder. The script can executed by entering the following into the terminal command line:
+
+```python
+python main.py
+```
+A Jupyter Notebook version has been included in same folder and is titled [main.ipynb](main.ipynb).
+
 ## Imports
 
+PyFrat imports the `os` module to facilitate the manipulation of files, folders, and paths across operating systems. The `csv` module provides classes that allow for the reading and writing of data in csv format.
 
+The PyBank dataset is imported from the file [budget_data.txt](Resources/budget_data.csv) and read into the variable `csvreader` as shown in the code snippet below:
 
+```python
+with open(csvpath, newline="") as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",") 
+```
+This makes the dataset available for analysis and calculations.
 
 ## what done
-a
+
+
 
 ## what achieved
 a
 
 ## references/sources
-a
+
+The following sources were consulted in the development of this script. 
+
+* [Python.org](https://docs.python.org/3/library/functions.html)
+* [stackoverflow]("https://www.stackoverflow.com")
+* [Codecademy](https://www.codecademy.com/catalog/language/python)
+* [Real Python](https://realpython.com/python-sum-function/)
