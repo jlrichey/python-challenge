@@ -49,7 +49,10 @@ with open(csvpath, newline="") as csvfile:
 ```
 This makes the dataset available for analysis and calculations.
 
-## what done
+## Methods
+
+The analysis was conducted primarily within the context of two `for` loops with variables `change` storing the difference between the current row iteration of `data` and `last_row` and appending to the list `change_m2m` which stores the month-to-month changes. The`net_PL` variable was used to calculate the 
+
 
 
 
