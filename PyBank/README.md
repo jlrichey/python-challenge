@@ -61,6 +61,6 @@ a
 The following sources were consulted in the development of this script. 
 
 * [Python.org](https://docs.python.org/3/library/functions.html)
-[Python.org](https://docs.python.org/3/library/functions.html)
+* [Python.org](https://docs.python.org/3/library/functions.html)
 * [Codecademy](https://www.codecademy.com/catalog/language/python)
 * [Real Python](https://realpython.com/python-sum-function/)
